@@ -215,6 +215,17 @@ class ExampleHomePage extends StatelessWidget {
               onEditingComplete: () {},
               onSubmitted: (value) {},
             ),
+            AoUiMediaThumbnail(
+              onPressed: () {
+                print('Miniatura pulsada');
+              },
+              isSelectable: true,
+              size: AoUiMediaThumbnailSize.large,
+              mediaType: AoUiMediaThumbnailType.photo,
+              customThumbnailImage: AoUIImage(
+                imageUrl: 'https://picsum.photos/100/100',
+              ),
+            ),
           ],
         ),
       ),
