@@ -1,6 +1,7 @@
 import 'package:aouikit/aouikit.dart';
 import 'package:flutter/material.dart';
 
+/// AoUiInputField es un campo de texto configurable con soporte para prefix/suffix
 class AoUiInputField extends StatelessWidget {
   final bool enabled;
   final bool readOnly;
@@ -122,11 +123,11 @@ class AoUiInputField extends StatelessWidget {
         fillColor: theme.colors.surfaceContainerLow,
         hintText: hintText,
         hintStyle: theme.typography.bodyLarge.copyWith(
-          color: theme.colors.onSurface.withOpacity(0.7),
+          color: theme.colors.onSurface.withOpacity(0.6),
         ),
         labelText: labelText,
         labelStyle: theme.typography.bodyLarge.copyWith(
-          color: theme.colors.onSurface.withOpacity(0.7),
+          color: theme.colors.onSurface.withOpacity(0.6),
         ),
         prefixIcon: prefixIcon,
         prefixIconConstraints: prefixIconConstraints,
@@ -141,27 +142,27 @@ class AoUiInputField extends StatelessWidget {
           color: theme.colors.onSurface,
         ),
         focusedBorder: UnderlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: theme.colors.primary),
         ),
         disabledBorder: UnderlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: theme.colors.surfaceContainerLow),
         ),
         enabledBorder: UnderlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: theme.colors.surfaceContainerLow),
         ),
         border: UnderlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: theme.colors.surfaceContainerLow),
         ),
         errorBorder: UnderlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: theme.colors.error),
         ),
         focusedErrorBorder: UnderlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: theme.colors.error),
         ),
       ),
@@ -184,7 +185,7 @@ class AoUiInputField extends StatelessWidget {
             child: Text(
               item.text!,
               style: theme.typography.bodyLarge.copyWith(
-                color: theme.colors.onSurface.withOpacity(0.7),
+                color: theme.colors.onSurface.withOpacity(0.6),
               ),
             ),
           ),
@@ -199,7 +200,7 @@ class AoUiInputField extends StatelessWidget {
         return (
           AoUiIconButton(
             type: item.buttonType!,
-            size: AoUiIconButtonSize.m,
+            size: AoUiIconButtonSize.l,
             onPressed: item.onButtonTap!,
             iconData: item.icon!,
           ),

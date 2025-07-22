@@ -7,10 +7,30 @@ class AoUiSpacing {
   final double xl; // Extra grande
 
   const AoUiSpacing({
-    required this.xs,
-    required this.s,
-    required this.m,
-    required this.l,
-    required this.xl,
+    this.xs = 4.0,
+    this.s = 8.0,
+    this.m = 16.0,
+    this.l = 24.0,
+    this.xl = 32.0,
   });
+
+  /// Instancia por defecto con valores estándar
+  static const AoUiSpacing defaultSpacing = AoUiSpacing();
+
+  /// Método para crear una copia con valores modificados (opcional)
+  AoUiSpacing copyWith({
+    double? xs,
+    double? s,
+    double? m,
+    double? l,
+    double? xl,
+  }) {
+    return AoUiSpacing(
+      xs: xs ?? this.xs,
+      s: s ?? this.s,
+      m: m ?? this.m,
+      l: l ?? this.l,
+      xl: xl ?? this.xl,
+    );
+  }
 }

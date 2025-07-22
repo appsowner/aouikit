@@ -7,7 +7,7 @@ import '../../theme/app_theme.dart';
 import 'button_styles.dart';
 import './button_enum.dart';
 
-class AOUIButton extends StatelessWidget {
+class AoUiButton extends StatelessWidget {
   final AOUIButtonType type;
   final AOUIButtonSize size;
   final String? label;
@@ -17,7 +17,7 @@ class AOUIButton extends StatelessWidget {
   final VoidCallback? onLongPress;
   final double? height;
 
-  const AOUIButton({
+  const AoUiButton({
     super.key,
     required this.type,
     this.size = AOUIButtonSize.m,

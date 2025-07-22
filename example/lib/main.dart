@@ -1,4 +1,3 @@
-import 'package:aouikit/atoms/image/ao_image.dart';
 import 'package:flutter/material.dart';
 import 'package:aouikit/aouikit.dart';
 import './config/design/design.dart';
@@ -144,15 +143,15 @@ class ExampleHomePage extends StatelessWidget {
               isBadged: true,
             ),
             AOUIBadge(badgeSize: AOUIBadgeSize.l, content: '1'),
-            AOUIButton(
+            AoUiButton(
               type: AOUIButtonType.primary,
-              size: AOUIButtonSize.m,
+              size: AOUIButtonSize.l,
               label: 'Primary',
               onPressed: () {},
             ),
-            AOUIButton(
+            AoUiButton(
               type: AOUIButtonType.secondary,
-              size: AOUIButtonSize.m,
+              size: AOUIButtonSize.xs,
               label: 'Secondary',
               onPressed: () {},
             ),
@@ -204,6 +203,17 @@ class ExampleHomePage extends StatelessWidget {
               size: AoUiIconButtonSize.m,
               iconData: Icons.access_alarm_outlined,
               onPressed: () {},
+            ),
+            AoUiInputField(
+              hintText: 'Hint Text',
+              labelText: 'Label',
+              obscureText: true,
+              controller: TextEditingController(),
+              keyboardType: TextInputType.text,
+              textInputAction: TextInputAction.done,
+              onChanged: (value) {},
+              onEditingComplete: () {},
+              onSubmitted: (value) {},
             ),
           ],
         ),
