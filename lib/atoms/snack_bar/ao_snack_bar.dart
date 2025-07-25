@@ -63,24 +63,6 @@ class AoUiSnackBarAction {
       _isDismissed = true;
 }
 
-/// AoUiSnackBar es un mensaje ligero con acción opcional que se muestra brevemente en la parte inferior.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiSnackBar(
-///   context: context,
-///   type: AoUiSnackBarType.success,
-///   message: 'Mensaje de éxito',
-///   action: AoUiSnackBarAction(
-///     label: 'Cerrar',
-///     onActionPressed: () {
-///       ScaffoldMessenger.of(context).hideCurrentSnackBar(
-///         reason: SnackBarClosedReason.dismiss,
-///       );
-///     },
-///   ),
-/// );
-/// ```
 class AoUiSnackBar extends SnackBar {
   AoUiSnackBar({
     super.key,

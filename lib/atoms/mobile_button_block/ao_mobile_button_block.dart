@@ -1,24 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:aouikit/atoms/button/ao_button.dart';
 
-/// AoUiMobileButtonBlock es un widget que muestra una fila de botones.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiMobileButtonBlock(
-///   style: AoUiMobileButtonBlockStyle(
-///     style: AoUiMobileButtonBlockStyleType.flexible,
-///     left: AoUiButton(
-///       label: 'Cancelar',
-///       onPressed: () {},
-///     ),
-///     right: AoUiButton(
-///       label: 'Guardar',
-///       onPressed: () {},
-///     ),
-///   ),
-/// )
-/// ```
 class AoUiMobileButtonBlock extends StatefulWidget {
   final AoUiMobileButtonBlockStyle style;
 

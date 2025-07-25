@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_theme.dart';
 
-/// AoUiSuccessCheckMark es un widget para mostrar un ícono de check de éxito.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiSuccessCheckMark()
-/// ```
 class AoUiSuccessCheckMark extends StatelessWidget {
   const AoUiSuccessCheckMark({super.key});
 

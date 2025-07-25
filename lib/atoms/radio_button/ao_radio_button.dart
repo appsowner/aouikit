@@ -3,17 +3,6 @@ import 'package:flutter/material.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/app_theme_data.dart';
 
-/// AoUiRadioButton es un botón que puede ser seleccionado o deseleccionado, usado para indicar una opción.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiRadioButton(
-///   onPressed: (selected) {
-///     print('Botón presionado: $selected');
-///   },
-///   isSelected: true,
-/// )
-/// ```
 class AoUiRadioButton extends StatelessWidget {
   final ValueChanged<bool>? onPressed;
   final bool isSelected;

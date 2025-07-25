@@ -3,21 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../../theme/app_theme.dart';
 
-/// AoUiNavigationRow es un widget para mostrar una fila de navegación con título, ícono y vista accesoria.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiNavigationRow(
-///   title: "Fila de Navegación",
-///   icon: CupertinoIcons.person,
-///   accessoryView: CupertinoButton(
-///     child: Text("Botón"),
-///     onPressed: () {
-///       print("Botón pulsado");
-///     },
-///   ),
-/// )
-/// ```
 class AoUiNavigationRow extends StatelessWidget {
   final String title;
   final IconData? icon;

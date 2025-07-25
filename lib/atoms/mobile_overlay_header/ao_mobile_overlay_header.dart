@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../aouikit.dart';
-import '../../theme/app_theme.dart';
 
 class AoUiMobileOverlayHeader extends StatelessWidget {
   final AoUiOverlayMobileStyle style;

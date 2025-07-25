@@ -1,7 +1,4 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
-
 import '../../theme/app_theme.dart';
 import '../../theme/app_theme_data.dart';
 
@@ -17,20 +14,6 @@ class AoUiMenuItemProperties {
   });
 }
 
-/// AoUiMenuItem representa un ítem de menú con título e íconos.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiMenuItem(
-///   item: AoUiMenuItemProperties(
-///     title: 'Item 1',
-///     style: AoUiMenuItemStyle.both,
-///   ),
-///   action: (state) {
-///     print(state);
-///   },
-/// )
-/// ```
 class AoUiMenuItem extends StatefulWidget {
   final AoUiMenuItemProperties item;
   final bool backgroundDark; // para hover

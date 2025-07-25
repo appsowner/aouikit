@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aouikit/aouikit.dart';
 import './config/design/design.dart';
@@ -30,7 +31,22 @@ class ExampleHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = AppTheme.of(context);
-
+    int selectedIndex = -1;
+    bool isSelected = false;
+    final List<AoUiSelectionCardStyle> cardStyles = [
+      AoUiSelectionCardStyle(
+        title: 'Opción 1',
+        description: ['Detalle 1', 'Detalle 2'],
+        footer: 'Pie de página 1',
+      ),
+      AoUiSelectionCardStyle(
+        title: 'Opción 2',
+        description: ['Detalle A', 'Detalle B'],
+        footer: 'Pie de página 2',
+      ),
+      AoUiSelectionCardStyle(title: 'Opción 3', footer: 'Pie de página 3'),
+    ];
+    var _value;
     return Scaffold(
       appBar: AppBar(
         title: Text('AOUiKit Example', style: theme.typography.titleLarge),
@@ -226,9 +242,160 @@ class ExampleHomePage extends StatelessWidget {
                 imageUrl: 'https://picsum.photos/100/100',
               ),
             ),
+            AoUiMenuItem(
+              item: AoUiMenuItemProperties(
+                title: 'Item 1',
+                style: AoUiMenuItemStyle.both,
+              ),
+              action: (state) {
+                print(state);
+              },
+            ),
+
+            AoUiMobileButtonBlock(
+              style: AoUiMobileButtonBlockStyle(
+                style: AoUiMobileButtonBlockStyleType.flexible,
+                left: AoUiButton(
+                  label: 'Cancelar',
+                  onPressed: () {},
+                  type: AOUIButtonType.primary,
+                ),
+                right: AoUiButton(
+                  label: 'Guardar',
+                  onPressed: () {},
+                  type: AOUIButtonType.secondary,
+                ),
+              ),
+            ),
+
+            // AoUiMobileOverlayHeader(
+            //   style: AoUiOverlayMobileStyle(
+            //     title: "Title",
+            //     action: () {
+            //       print("Action");
+            //     },
+            //     style: AoUiOverlayMobileStyleType.onlyTitle,
+            //   ),
+            // ),
+            AoUiNavigationRow(
+              title: "Fila de Navegación",
+              icon: CupertinoIcons.person,
+              accessoryView: CupertinoButton(
+                child: Text("Botón"),
+                onPressed: () {
+                  print("Botón pulsado");
+                },
+              ),
+            ),
+            AoUiRadioButton(
+              onPressed: (selected) {
+                print('Botón presionado: $selected');
+              },
+              isSelected: true,
+            ),
+            AoUiRadioRow(
+              title: 'Opción 1',
+              description: 'Descripción opcional para la opción 1',
+              isSelected: isSelected,
+              onPressed: (selected) {
+                setState(() {
+                  isSelected = selected;
+                });
+              },
+              backgroundDark: false, // Cambia a true para fondo oscuro
+            ),
+            // AoUiSearchBar(
+            //   showBackIcon: true,
+            //   showClearButton: true,
+            //   placeholder: "Buscar",
+            //   onBackAction: () {
+            //     print("Botón atrás presionado");
+            //   },
+            //   onClear: () {
+            //     print("Botón limpiar presionado");
+            //   },
+            //   onChanged: (value) {
+            //     print("Valor búsqueda: $value");
+            //   },
+            //   autofocus: true,
+            // ),
+            // ListView.builder(
+            //   padding: const EdgeInsets.all(16.0),
+            //   itemCount: cardStyles.length,
+            //   itemBuilder: (context, index) {
+            //     final style = cardStyles[index];
+            //     return Padding(
+            //       padding: const EdgeInsets.only(bottom: 12.0),
+            //       child: AoUiSelectionCard(
+            //         style: style,
+            //         isSelected: selectedIndex == index,
+            //         showChevron: true,
+            //         icon: Icons.account_circle,
+            //         badgeCount: index == 1 ? 3 : null,
+            //         badgeColor: Colors.red,
+            //         isHovered: false, // Puedes manejar hover si quieres
+            //         action: () {
+            //           setState(() {
+            //             selectedIndex = index;
+            //           });
+            //         },
+            //       ),
+            //     );
+            //   },
+            // ),
+            // AoUiSlider(
+            //   value: _value,
+            //   min: 0.0,
+            //   max: 100.0,
+            //   onChanged: (newValue) {
+            //     setState(() {
+            //       _value = newValue;
+            //     });
+            //   },
+            // ),
+            // AoUiSnackBar(
+            //   context: context,
+            //   type: AoUiSnackBarType.success,
+            //   message: 'Mensaje de éxito',
+            //   action: AoUiSnackBarAction(
+            //     label: 'Cerrar',
+            //     onActionPressed: () {
+            //       ScaffoldMessenger.of(
+            //         context,
+            //       ).hideCurrentSnackBar(reason: SnackBarClosedReason.dismiss);
+            //     },
+            //   ),
+            // ),
+            AoUiSuccessCheckMark(),
+            AoUiTag(
+              tagContrast: AoUiTagContrast.high,
+              tagIconType: AoUiTagIconType.left,
+              tagSize: AoUiTagSize.s,
+              tagText: 'Tag',
+            ),
+            AoUiToggleRow(
+              title: 'Title',
+              description: 'Description',
+              icon: Icon(Icons.ac_unit),
+              value: true,
+              onChanged: (value) {
+                print(value);
+              },
+            ),
+
+            // AoUiToggleSwitch(
+            //   value: _value,
+            //   onChanged: (value) {
+            //     setState(() {
+            //       _value = value;
+            //     });
+            //   },
+            // ),
           ],
         ),
       ),
     );
   }
+
+  void setState(Null Function() param0) {}
 }

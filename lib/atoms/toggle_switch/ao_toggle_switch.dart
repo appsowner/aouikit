@@ -2,19 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../theme/app_theme.dart';
 
-/// AoUiToggleSwitch es un widget para alternar entre dos estados.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiToggleSwitch(
-///   value: _value,
-///   onChanged: (value) {
-///     setState(() {
-///       _value = value;
-///     });
-///   },
-/// )
-/// ```
 class AoUiToggleSwitch extends StatefulWidget {
   final bool value;
   final ValueChanged<bool>? onChanged;

@@ -1,20 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// AoUiSlider es un widget para seleccionar un valor dentro de un rango.
-///
-/// Ejemplo:
-/// ```dart
-/// AoUiSlider(
-///   value: _value,
-///   min: 0.0,
-///   max: 100.0,
-///   onChanged: (newValue) {
-///     setState(() {
-///       _value = newValue;
-///     });
-///   },
-/// )
-/// ```
 class AoUiSlider extends StatelessWidget {
   final double value;
   final ValueChanged<double>? onChanged;

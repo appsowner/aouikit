@@ -44,7 +44,7 @@ export './atoms/success_check_mark/ao_success_check_mark.dart';
 export './atoms/tab_bar/ao_tab_bar.dart';
 export './atoms/toggle_row/ao_toggle_row.dart';
 export './atoms/toggle_switch/ao_toggle_switch.dart';
-
+export './atoms/tag/ao_tag.dart';
 // Theme
 
 export './theme/app_theme.dart';
